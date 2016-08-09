@@ -58,10 +58,10 @@ grid.behavior.setHeaders({
 });</code></pre><p>You can nest headers to any level. The example above is only one level deep. The live <a href="http://openfin.github.io/fin-hypergrid/grouped-header.html">demo</a> demonstrates a nested header (one additional level).</p>
 <p>This API uses its own extension of the <a href="SimpleCell.html"><code>SimpleCell</code></a> cell renderer which does the stretched partial cell renders explained above. It also calls a background paint function to fill the area behind the group labels. This API comes with two such background paint functions, described below. These are both exposed so you can specify one over the other. You can also specify a reference to a custom function.</p>
 <h3>Background paint functions</h3><h4><a href="groupedHeader.html#.drawProportionalBottomBorder"><code>drawProportionalBottomBorder</code></a></h4><p>This is the default background paint function. It paints a bottom border under the group header whose thickness is in proportion to the order (level) of the group:</p>
-<p><img src="https://github.com/openfin/fin-hypergrid/blob/master/images/jsdoc/grouped-header/bottom-border.png" alt="Bottom Border Background"></p>
+<p><img src="https://github.com/openfin/fin-hypergrid/raw/master/images/jsdoc/grouped-header/bottom-border.png" alt="Bottom Border Background"></p>
 <p>The lowest-order group has a 1-pixel thick border; borders grow progressively thicker with each superior group; the highest-order group has the thickest border.</p>
 <h4><a href="groupedHeader.html#.drawLinearGradient"><code>drawLinearGradient</code></a></h4><p>This paints a background that transitions color from top to bottom:</p>
-<p><img src="https://github.com/openfin/fin-hypergrid/blob/master/images/jsdoc/grouped-header/gradient.png" alt="Linear Gradient Background"></p>
+<p><img src="https://github.com/openfin/fin-hypergrid/raw/master/images/jsdoc/grouped-header/gradient.png" alt="Linear Gradient Background"></p>
 <h3>Options</h3><p>Options are supplied to the <a href="groupedHeader.html#.mixInTo"><code>mixInTo</code></a> call and apply to the entire grid so that all column groups in a grid share the same appearance. Most options (with the exception of <code>delimiter</code>) are for the use of the <a href="groupedHeader.mixInTo-GroupedHeader.html"><code>GroupedHeader</code></a> cell renderer.</p>
 <h4><code>paintBackground</code> option</h4><p>To override the default background paint function, pass a reference in the <code>backgroundPaint</code> option:</p>
 <pre class="prettyprint source lang-javascript"><code>fin.Hypergrid.groupedHeader.mixInTo(grid, {
@@ -77,7 +77,7 @@ grid.behavior.setHeaders({
    ],
    groupColor: 'red'
 });</code></pre><p>The gradient shown above fills the background, transitioning from top (0) in yellow (<code>255, 255, 0</code>) with alpha=0% (<code>0</code>) to bottom (<code>1</code>) with alpha=50% (<code>.5</code>):</p>
-<p><img src="https://github.com/openfin/fin-hypergrid/blob/master/images/jsdoc/grouped-header/gradient-yellow.png" alt="Linear Gradient Background (Yellow)"></p>
+<p><img src="https://github.com/openfin/fin-hypergrid/raw/master/images/jsdoc/grouped-header/gradient-yellow.png" alt="Linear Gradient Background (Yellow)"></p>
 <h4><code>groupColor</code> option</h4><p>The example above also illustrates setting the <code>groupColor</code> option which specifies the font color for the group labels, in this case red (yuck! but it's just an example).</p>
 <h4><code>delimiter</code> option</h4><p>Allows you to change the delimiter in the header strings from the default vertical bar character (<code>'|'</code>) to something else.</p></div>
         
